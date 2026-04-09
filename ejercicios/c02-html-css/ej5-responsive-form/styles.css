@@ -1,0 +1,153 @@
+:root {
+    --color-fondo: #1e1e2f;
+    --color-principal: #1abc9c;
+    --color-texto: #ffffff;
+    --color-hover: #16a085;
+    --sombra: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.titulo-seccion {
+    margin-top: 20px;
+    color: var(--color-principal);
+}
+
+img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 15px 0;
+    box-shadow: var(--sombra);
+}
+
+#menu {
+    display: flex;
+    gap: 15px;
+    list-style: none;
+    margin-top: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    padding: 8px 12px;
+    border-radius: 5px;
+    box-shadow: var(--sombra);
+    
+}
+
+a:hover {
+    background-color: var(--color-hover);
+}
+.promedio {
+    text-align: center;
+    color: #16a085;
+}
+h1, h2, p {
+    text-align: center;
+}
+
+
+form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+fieldset {
+    border: 2px solid var(--color-principal);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+legend {
+    padding: 0 10px;
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+label {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+input, textarea {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background-color: #2a2a40;
+    color: white;
+}
+
+input:focus, textarea:focus {
+    border: 2px solid var(--color-principal);
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: var(--sombra);
+    display: block;
+    margin: 15px auto;
+}
+
+button:hover {
+    background-color: var(--color-hover);
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    #menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    img {
+        width: 120px;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
