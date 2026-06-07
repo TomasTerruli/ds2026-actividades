@@ -1,0 +1,42 @@
+body {
+  background-color: #EADBC8;
+}
+
+.hero {
+  background-color: #F5EFE6;
+  color: #3E2C23;
+}
+
+.btn-hero {
+  background-color: #8B5E34;
+  color: white;
+  border: none;
+}
+
+.btn-hero:hover {
+  background-color: #6F4518;    
+  color: white;
+}
+
+.card-libro {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+.img-libro {
+  height: 240px;
+  object-fit: cover;
+}
+
+.navbar-custom {
+  background-color: #5f4f46;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #F5EFE6;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #D8C3A5;
+}
