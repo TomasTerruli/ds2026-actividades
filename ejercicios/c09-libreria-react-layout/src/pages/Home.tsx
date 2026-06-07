@@ -1,28 +1,7 @@
 import { Col, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import LibroCard from '../components/LibroCard'
-import type { Libro } from '../types/libro'
-
-const libros: Libro[] = [
-  {
-    id: 1,
-    titulo: 'Harry Potter y la piedra filosofal',
-    autor: 'J.K. Rowling',
-    imagen: 'https://imaginaria.com.ar/02/6/potter.jpg',
-  },
-  {
-    id: 2,
-    titulo: 'Harry Potter y la cámara secreta',
-    autor: 'J.K. Rowling',
-    imagen: 'https://www.pottermorepublishing.com/wp-content/covers/web/9781781101322.jpg',
-  },
-  {
-    id: 3,
-    titulo: 'Harry Potter y el prisionero de Azkaban',
-    autor: 'J.K. Rowling',
-    imagen: 'https://m.media-amazon.com/images/I/81ONODZ5t5L._AC_UF1000,1000_QL80_.jpg',
-  },
-]
+import { libros } from '../data/libros'
 
 function Home() {
   return (
@@ -35,9 +14,9 @@ function Home() {
             Descubrí libros destacados, autores clásicos y nuevas historias para disfrutar.
           </p>
 
-            <Link to="/catalogo" className="btn btn-hero btn-lg mt-3">
-                Ver catálogo
-            </Link>
+          <Link to="/catalogo" className="btn btn-hero btn-lg mt-3">
+            Ver catálogo
+          </Link>
         </div>
       </section>
 

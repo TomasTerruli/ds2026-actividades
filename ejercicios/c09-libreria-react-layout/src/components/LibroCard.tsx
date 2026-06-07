@@ -26,14 +26,12 @@ function LibroCard({ libro }: LibroCardProps) {
           Autor: {libro.autor}
         </Card.Text>
 
-        <Button
-          as={Link}
-          to={`/libros/${libro.id}`}
-          variant="outline-primary"
-          className="me-2"
-        >
-          Ver más
-        </Button>
+        <Link
+            to={`/libros/${libro.id}`}
+            className="btn btn-outline-primary me-2"
+            >
+            Ver más
+        </Link>
 
         <Button variant="outline-danger" onClick={() => setLikes(likes + 1)}>
           Me gusta {likes}
