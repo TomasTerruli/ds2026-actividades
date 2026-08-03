@@ -1,0 +1,5 @@
+### Raíz de la API
+GET http://localhost:3000/
+
+### Obtener todos los libros
+GET http://localhost:3000/libros
