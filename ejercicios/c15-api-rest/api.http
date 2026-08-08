@@ -1,0 +1,107 @@
+@baseUrl = http://localhost:3000
+
+### ─────────── LIBROS ───────────
+
+### Listar todos los libros → 200
+GET {{baseUrl}}/api/libros
+
+### Sólo los disponibles → 200
+GET {{baseUrl}}/api/libros?disponible=true
+
+### Un libro → 200
+GET {{baseUrl}}/api/libros/1
+
+### Un libro que no existe → 404
+GET {{baseUrl}}/api/libros/999
+
+### Crear un libro → 201
+POST {{baseUrl}}/api/libros
+Content-Type: application/json
+
+{
+  "titulo": "Rayuela",
+  "autor": "Julio Cortázar",
+  "precio": 22000,
+  "imagen": "https://imagenes.elpais.com/rayuela.jpg",
+  "disponible": true
+}
+
+### Editar un libro → 200
+PUT {{baseUrl}}/api/libros/1
+Content-Type: application/json
+
+{
+  "titulo": "Harry Potter y la piedra filosofal (edición ilustrada)",
+  "autor": "J.K. Rowling",
+  "precio": 25000,
+  "imagen": "https://imaginaria.com.ar/02/6/potter.jpg",
+  "disponible": false
+}
+
+### Editar un libro que no existe → 404
+PUT {{baseUrl}}/api/libros/999
+Content-Type: application/json
+
+{
+  "titulo": "Fantasma",
+  "autor": "Nadie",
+  "precio": 1,
+  "imagen": "https://example.com/nada.jpg",
+  "disponible": false
+}
+
+### Borrar un libro → 204 (sin body)
+DELETE {{baseUrl}}/api/libros/6
+
+### Borrar el mismo libro otra vez → 404
+DELETE {{baseUrl}}/api/libros/6
+
+### ─────────── AUTORES ───────────
+
+### Listar todos los autores → 200
+GET {{baseUrl}}/api/autores
+
+### Filtrar por nacionalidad → 200
+GET {{baseUrl}}/api/autores?nacionalidad=Argentina
+
+### Un autor → 200
+GET {{baseUrl}}/api/autores/1
+
+### Un autor que no existe → 404
+GET {{baseUrl}}/api/autores/999
+
+### Crear un autor → 201
+POST {{baseUrl}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Mariana Enriquez",
+  "nacionalidad": "Argentina",
+  "biografia": "Autora de Nuestra parte de noche."
+}
+
+### Editar un autor → 200
+PUT {{baseUrl}}/api/autores/2
+Content-Type: application/json
+
+{
+  "nombre": "Julio Cortázar",
+  "nacionalidad": "Argentina",
+  "biografia": "Autor de Rayuela, Bestiario y Final del juego."
+}
+
+### Editar un autor que no existe → 404
+PUT {{baseUrl}}/api/autores/999
+Content-Type: application/json
+
+{
+  "nombre": "Nadie",
+  "nacionalidad": "Ninguna",
+  "biografia": "No existe."
+}
+
+### Borrar un autor → 204 (sin body)
+DELETE {{baseUrl}}/api/autores/3
+
+### Borrar el mismo autor otra vez → 404
+DELETE {{baseUrl}}/api/autores/3
